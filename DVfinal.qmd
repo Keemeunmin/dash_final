@@ -1,6 +1,6 @@
 ---
 title: "DVfinal"
-author: "김은민(2021-46394)"
+author: "김은민"
 format: dashboard
 execute: 
   enabled: true
@@ -59,7 +59,7 @@ fig1 = px.density_heatmap(
 )
 
 fig1.update_layout(
-    xaxis_title='Pickup 시간',
+    xaxis_title='pickup 시간',
     yaxis_title='요일',
     coloraxis_colorbar_title='평균속력'
 )
@@ -89,7 +89,7 @@ fig2 = px.density_heatmap(
 
 
 fig2.update_layout(
-    xaxis_title='Pickup 시간',
+    xaxis_title='pickup 시간',
     yaxis_title='요일',
     coloraxis_colorbar_title='평균이동거리'
 )
@@ -122,7 +122,7 @@ fig3 = px.line_mapbox(
     center = {'lat':40.7322, 'lon':-73.9052},
     #---#
     mapbox_style = 'carto-positron',
-    zoom=10,   
+    zoom=11   
 )
 
 scatter_data = px.scatter_mapbox(
@@ -134,9 +134,7 @@ scatter_data = px.scatter_mapbox(
     color = 'speed_cut',
     #---#
     mapbox_style = 'carto-positron',
-    zoom=10,
-    width = 750,
-    height = 600    
+    zoom=11 
 ).data 
 for sd in scatter_data: 
     fig3.add_trace(sd)
